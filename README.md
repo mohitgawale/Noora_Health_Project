@@ -94,3 +94,37 @@ This will:
 - `pandas`, `matplotlib`, `seaborn` – for data processing and visualization
 
 ---
+
+
+# 📝 Project Workflow Summary
+
+This project follows a structured approach to build a reliable data pipeline using Google Sheets, PostgreSQL, and Python.
+
+---
+
+## ✅ Steps Followed
+
+1. **Google Sheets Setup**  
+   First, I copied the original Google Sheet data into a new Google Sheet where I had the necessary permissions to use the **Google Sheets API**.
+
+2. **Read Data via API**  
+   Then, I used the **Google Sheets API** to read the data directly into my Python code.
+
+3. **PostgreSQL Connection**  
+   I created a client to connect to a **PostgreSQL** database from Python.
+
+4. **Table Creation**  
+   After setting up the database connection, I created the necessary **tables** in the PostgreSQL database.
+
+5. **Data Ingestion**  
+   Once the setup was done, I loaded the data from Google Sheets into those tables.
+
+6. **Data Processing**  
+   Finally, I wrote **SQL and Python** code to:
+   - **Transform** the data (combine and clean it)
+   - **Validate** it (check for data quality issues)
+   - **Visualize** the results using charts and graphs
+
+---
+
+This end-to-end pipeline ensures automated ingestion, clean data, and meaningful insights.
