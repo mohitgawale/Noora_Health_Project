@@ -1,0 +1,8 @@
+pyspark==3.5.1
+pandas
+sqlalchemy
+psycopg2-binary
+pyyaml
+plotly
+seaborn
+matplotlib
