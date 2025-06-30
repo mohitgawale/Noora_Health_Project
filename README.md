@@ -124,7 +124,40 @@ This project follows a structured approach to build a reliable data pipeline usi
    - **Transform** the data (combine and clean it)
    - **Validate** it (check for data quality issues)
    - **Visualize** the results using charts and graphs
-
 ---
 
 This end-to-end pipeline ensures automated ingestion, clean data, and meaningful insights.
+
+
+# 📝 Additional Notes
+
+### 📊 User Metrics Clarification
+
+The project was expected to compute and visualize:
+
+- **Total Users Over Time**: Users who sent or received a message
+- **Active Users Over Time**: Users who sent a message (inbound direction)
+
+However, after inspecting the data:
+- All entries share the same `number_id`, indicating there is only **one unique user**.
+- Given this, user-based metrics and visualizations were not meaningful or created, as they would not offer insights beyond a single user's activity.
+
+---
+
+### ⚙️ On the Use of PySpark
+
+While **PySpark** was initially considered for this pipeline:
+
+- The dataset is small and does not require distributed processing.
+- Using Spark in this context would add unnecessary complexity without any real performance benefit.
+
+In a **production environment**, Spark would be recommended for:
+- Large-scale datasets
+- Parallel processing of real-time or batch data
+- Integration with distributed storage systems (e.g., HDFS, S3)
+
+For this use case, **standard Python (pandas + SQL)** was optimal for both simplicity and performance.
+
+---
+
+
